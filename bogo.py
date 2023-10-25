@@ -1,16 +1,15 @@
 # Bogo Sort: Shuffles Entire list, Until the List is Sorted
 
-import random, time
+from utils import get_list, benchmark, is_sorted
+import random
 
-arr = [4, 5, 8, 7, 10, 7, 6, 15]
-print(f"Unsorted: {arr}")
+arr = get_list()
 
-st = time.perf_counter()
+def sort():
+    while not is_sorted(arr):
+        random.shuffle(arr)
 
-while not all(arr[i] <= arr[i+1] for i in range(len(arr) - 1)):
-    random.shuffle(arr)
-
-et = time.perf_counter()
+time = benchmark(sort)
 
 print(f"Sorted: {arr}")
-print(f"Took {et-st:.3f} sec")
+print(time)

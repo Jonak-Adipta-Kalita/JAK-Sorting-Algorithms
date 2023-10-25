@@ -1,13 +1,18 @@
 # Stalin Sort: Removes any Item from the Array which is smaller than the previous item
 
-arr = [4, 5, 8, 7, 10, 7, 6, 15]
-print(f"Unsorted: {arr}")
+from utils import get_list, benchmark
 
-for i, d in enumerate(arr):
-    try:
-        if arr[i + 1] < d:
-            arr.remove(arr[i + 1])
-    except IndexError:
-        pass
+arr = get_list()
+
+def sort():
+    for i, d in enumerate(arr):
+        try:
+            if arr[i + 1] < d:
+                arr.remove(arr[i + 1])
+        except IndexError:
+            pass
+
+time = benchmark(sort)
 
 print(f"Sorted: {arr}")
+print(time)
