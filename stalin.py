@@ -7,7 +7,7 @@ arr = get_list()
 def sort():
     for i, d in enumerate(arr):
         try:
-            if arr[i + 1] < d:
+            while arr[i + 1] < d:
                 arr.remove(arr[i + 1])
         except IndexError:
             pass
