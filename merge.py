@@ -1,7 +1,6 @@
 # Merge Sort: Recursive, divide-and-conquer sorting algorithm that repeatedly divides an array into halves, sorts the subarrays, and then merges them in a sorted manner.
 
 from utils import get_list, benchmark
-import random
 
 arr = get_list()
 

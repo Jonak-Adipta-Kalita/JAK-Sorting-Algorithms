@@ -1,7 +1,6 @@
 # Bubble Sort: Repeatedly steps through the List, comparing the current element with the one after it, swapping their values if needed.
 
 from utils import get_list, benchmark
-import random
 
 arr = get_list()
 

@@ -1,7 +1,6 @@
 # Insertion Sort: Builds the final sorted array one item at a time by comparisons
 
 from utils import get_list, benchmark
-import random
 
 arr = get_list()
 
