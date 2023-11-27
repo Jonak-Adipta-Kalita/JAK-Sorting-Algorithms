@@ -6,12 +6,13 @@ from threading import Timer
 
 arr = get_list()
 
+
 def sort():
     global arr
 
     new_arr = []
     max_element = max(arr)
-    
+
     def append(item):
         new_arr.append(item)
 
@@ -20,6 +21,7 @@ def sort():
     sleep(max_element + 1)
 
     arr = new_arr
+
 
 time = benchmark(sort)
 

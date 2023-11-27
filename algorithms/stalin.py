@@ -4,6 +4,7 @@ from utils import get_list, benchmark
 
 arr = get_list()
 
+
 def sort():
     for i, d in enumerate(arr):
         try:
@@ -11,6 +12,7 @@ def sort():
                 arr.remove(arr[i + 1])
         except IndexError:
             pass
+
 
 time = benchmark(sort)
 

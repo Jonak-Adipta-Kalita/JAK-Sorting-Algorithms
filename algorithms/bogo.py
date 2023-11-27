@@ -5,9 +5,11 @@ import random
 
 arr = get_list()
 
+
 def sort():
     while not is_sorted(arr):
         random.shuffle(arr)
+
 
 time = benchmark(sort)
 

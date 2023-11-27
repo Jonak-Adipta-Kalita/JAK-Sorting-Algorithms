@@ -4,9 +4,10 @@ from utils import get_list, benchmark
 
 arr = get_list()
 
+
 def merge(num_list, left, right, mid):
-    left_copy = num_list[left:mid + 1]
-    right_copy = num_list[mid + 1:right + 1]
+    left_copy = num_list[left : mid + 1]
+    right_copy = num_list[mid + 1 : right + 1]
 
     l_counter, r_counter = 0, 0
     sorted_counter = left
@@ -20,7 +21,7 @@ def merge(num_list, left, right, mid):
             r_counter += 1
 
         sorted_counter += 1
-    
+
     while l_counter < len(left_copy):
         num_list[sorted_counter] = left_copy[l_counter]
         l_counter += 1
@@ -33,7 +34,8 @@ def merge(num_list, left, right, mid):
 
 
 def sort(num_list, left, right):
-    if left >= right: return
+    if left >= right:
+        return
 
     mid = (left + right) // 2
 
@@ -41,6 +43,7 @@ def sort(num_list, left, right):
     sort(num_list, mid + 1, right)
 
     merge(num_list, left, right, mid)
+
 
 time = benchmark(lambda: sort(arr, 0, len(arr) - 1))
 

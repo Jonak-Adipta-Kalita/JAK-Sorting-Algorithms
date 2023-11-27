@@ -1,6 +1,7 @@
 from typing import Callable
 import time
 
+
 def benchmark(func: Callable) -> str:
     st = time.perf_counter()
     func()
