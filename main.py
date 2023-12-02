@@ -1,3 +1,5 @@
+import algorithms.bogo
+
 algorithms = {
     "bogo": "Shuffles Entire list, Until the List is Sorted",
     "bubble": "Repeatedly steps through the List, comparing the current element with the one after it, swapping their values if needed.",

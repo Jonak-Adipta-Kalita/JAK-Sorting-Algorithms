@@ -1,17 +1,14 @@
 # Bogo Sort: Shuffles Entire list, Until the List is Sorted
 
-from utils import get_list, benchmark, is_sorted
+from utils.sort import Sort
+from typing import List
 import random
 
-arr = get_list()
 
-
-def sort():
-    while not is_sorted(arr):
+def algorithm(arr: List):
+    while not Sort.is_sorted(arr):
         random.shuffle(arr)
 
 
-time = benchmark(sort)
-
-print(f"Sorted: {arr}")
-print(time)
+bogo = Sort(algorithm)
+bogo.sort()
