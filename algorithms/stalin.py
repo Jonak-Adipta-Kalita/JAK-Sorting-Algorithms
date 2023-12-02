@@ -1,11 +1,10 @@
 # Stalin Sort: Removes any Item from the Array which is smaller than the previous item
 
-from utils import get_list, benchmark
+from utils.sort import Sort
+from typing import List
 
-arr = get_list()
 
-
-def sort():
+def algorithm(arr: List):
     for i, d in enumerate(arr):
         try:
             while arr[i + 1] < d:
@@ -14,7 +13,5 @@ def sort():
             pass
 
 
-time = benchmark(sort)
-
-print(f"Sorted: {arr}")
-print(time)
+stalin = Sort(algorithm)
+stalin.sort()

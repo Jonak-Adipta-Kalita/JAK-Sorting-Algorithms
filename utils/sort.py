@@ -12,7 +12,7 @@ class Sort:
         self.benchmark()
 
         if not self.is_sorted(self.arr):
-            return
+            raise Exception("The array wasn't sorted.")
 
         print(f"Sorted: {self.arr}")
         print(self.time)

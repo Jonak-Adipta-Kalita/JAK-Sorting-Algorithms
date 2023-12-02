@@ -1,11 +1,10 @@
 # Insertion Sort: Builds the final sorted array one item at a time by comparisons
 
-from utils import get_list, benchmark
+from utils.sort import Sort
+from typing import List
 
-arr = get_list()
 
-
-def sort():
+def algorithm(arr: List):
     for i, d in enumerate(arr):
         j = i - 1
         while j >= 0 and d < arr[j]:
@@ -14,7 +13,5 @@ def sort():
         arr[j + 1] = d
 
 
-time = benchmark(sort)
-
-print(f"Sorted: {arr}")
-print(time)
+insertion = Sort(algorithm)
+insertion.sort()

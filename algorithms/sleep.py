@@ -1,15 +1,12 @@
 # Sleep Sort: Sorts elements by assigning each element a sleep time proportional to its value and appends the array after sleeping.
 
-from utils import get_list, benchmark
-from time import sleep
+from utils.sort import Sort
+from typing import List
 from threading import Timer
+import time
 
-arr = get_list()
 
-
-def sort():
-    global arr
-
+def algorithm(arr: List):
     new_arr = []
     max_element = max(arr)
 
@@ -18,12 +15,11 @@ def sort():
 
     for i in arr:
         Timer(i, append, (i,)).start()
-    sleep(max_element + 1)
+    time.sleep(max_element + 1)
 
-    arr = new_arr
+    arr.clear()
+    arr.extend(new_arr)
 
 
-time = benchmark(sort)
-
-print(f"Sorted: {arr}")
-print(time)
+sleep = Sort(algorithm)
+sleep.sort()
