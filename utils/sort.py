@@ -1,5 +1,5 @@
 from typing import Callable, List
-import matplotlib.pyplot as plt
+import numpy as np
 import time
 
 
@@ -15,7 +15,7 @@ class Sort:
         if not self.is_sorted(self.arr):
             raise Exception("The array wasn't sorted.")
 
-        print(f"Sorted: {self.arr}")
+        print(f"Sorted: {list(self.arr)}")
         print(self.time)
 
     @staticmethod
@@ -23,9 +23,9 @@ class Sort:
         return all(arr[i] <= arr[i + 1] for i in range(len(arr) - 1))
 
     def get_list(self) -> List:
-        arr = [7, 13, 25, 9, 42, 31, 4, 18, 2, 11,
-               37, 15, 6, 28, 50, 3, 8, 19, 14, 61]
-        print(f"Unsorted: {arr}")
+        arr = np.array([7, 13, 25, 9, 42, 31, 4, 18, 2, 11,
+                        37, 15, 6, 28, 50, 3, 8, 19, 14, 61])
+        print(f"Unsorted: {list(arr)}")
 
         return arr
 
