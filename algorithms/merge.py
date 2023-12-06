@@ -43,5 +43,5 @@ def sort(num_list, left, right):
     merge_(num_list, left, right, mid)
 
 
-merge = Sort(lambda arr: sort(arr, 0, len(arr) - 1))
-merge.sort()
+def merge():
+    Sort(lambda arr: sort(arr, 0, len(arr) - 1)).sort()

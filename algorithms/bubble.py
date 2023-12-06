@@ -13,5 +13,5 @@ def algorithm(arr: List):
                 arr[j + 1] = temp
 
 
-bubble = Sort(algorithm)
-bubble.sort()
+def bubble():
+    Sort(algorithm).sort()

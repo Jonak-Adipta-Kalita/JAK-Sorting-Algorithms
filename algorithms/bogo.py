@@ -10,5 +10,5 @@ def algorithm(arr: List):
         random.shuffle(arr)
 
 
-bogo = Sort(algorithm)
-bogo.sort()
+def bogo():
+    Sort(algorithm).sort()
