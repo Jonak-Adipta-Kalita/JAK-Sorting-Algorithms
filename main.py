@@ -1,4 +1,5 @@
 from algorithms import *
+import sys
 
 algorithms = {
     "bogo": "Shuffles Entire list, Until the List is Sorted",
@@ -9,10 +10,15 @@ algorithms = {
     "stalin": "Iterates through the list, removing any element that is not in order.",
 }
 
-for algorithm in algorithms:
-    print(f"{algorithm}: {algorithms[algorithm]}")
+choice = ""
+if sys.argv[1:]:
+    choice = sys.argv[1].lower()
+else:
+    for algorithm in algorithms:
+        print(f"{algorithm}: {algorithms[algorithm]}")
 
-choice = str(input("\nEnter the algorithm you want to use: ")).lower()
+    choice = str(input("\nEnter the algorithm you want to use: ")).lower()
+
 if choice not in algorithms:
     print("Invalid Algorithm")
     exit()
