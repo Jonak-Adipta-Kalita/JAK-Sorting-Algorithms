@@ -8,7 +8,7 @@ def algorithm(arr: List):
     for i, d in enumerate(arr):
         try:
             while arr[i + 1] < d:
-                arr.remove(arr[i + 1])
+                del arr[i + 1]
         except IndexError:
             pass
 
