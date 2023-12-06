@@ -1,18 +1,16 @@
 # Stalin Sort: Removes any Item from the Array which is smaller than the previous item
 
-from utils import get_list, benchmark
+from utils.sort import Sort
+from typing import List
 
-arr = get_list()
 
-def sort():
+def algorithm(arr: List):
     for i, d in enumerate(arr):
         try:
             while arr[i + 1] < d:
-                arr.remove(arr[i + 1])
+                del arr[i + 1]
         except IndexError:
             pass
 
-time = benchmark(sort)
 
-print(f"Sorted: {arr}")
-print(time)
+def sort(): Sort(algorithm).sort()

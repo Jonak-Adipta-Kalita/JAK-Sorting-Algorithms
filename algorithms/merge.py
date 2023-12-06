@@ -1,12 +1,11 @@
 # Merge Sort: Recursive, divide-and-conquer sorting algorithm that repeatedly divides an array into halves, sorts the subarrays, and then merges them in a sorted manner.
 
-from utils import get_list, benchmark
+from utils.sort import Sort
 
-arr = get_list()
 
 def merge(num_list, left, right, mid):
-    left_copy = num_list[left:mid + 1]
-    right_copy = num_list[mid + 1:right + 1]
+    left_copy = num_list[left: mid + 1]
+    right_copy = num_list[mid + 1: right + 1]
 
     l_counter, r_counter = 0, 0
     sorted_counter = left
@@ -20,7 +19,7 @@ def merge(num_list, left, right, mid):
             r_counter += 1
 
         sorted_counter += 1
-    
+
     while l_counter < len(left_copy):
         num_list[sorted_counter] = left_copy[l_counter]
         l_counter += 1
@@ -32,17 +31,16 @@ def merge(num_list, left, right, mid):
         sorted_counter += 1
 
 
-def sort(num_list, left, right):
-    if left >= right: return
+def divide_arr(num_list, left, right):
+    if left >= right:
+        return
 
     mid = (left + right) // 2
 
-    sort(num_list, left, mid)
-    sort(num_list, mid + 1, right)
+    divide_arr(num_list, left, mid)
+    divide_arr(num_list, mid + 1, right)
 
     merge(num_list, left, right, mid)
 
-time = benchmark(lambda: sort(arr, 0, len(arr) - 1))
 
-print(f"Sorted: {arr}")
-print(time)
+def sort(): Sort(lambda arr: divide_arr(arr, 0, len(arr) - 1)).sort()
