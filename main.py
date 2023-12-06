@@ -1,3 +1,5 @@
+from algorithms import *
+
 algorithms = {
     "bogo": "Shuffles Entire list, Until the List is Sorted",
     "bubble": "Repeatedly steps through the List, comparing the current element with the one after it, swapping their values if needed.",
@@ -6,3 +8,25 @@ algorithms = {
     "sleep": "Sorts elements by assigning each element a sleep time proportional to its value and appends the array after sleeping.",
     "stalin": "Iterates through the list, removing any element that is not in order.",
 }
+
+for algorithm in algorithms:
+    print(f"{algorithm}: {algorithms[algorithm]}")
+
+choice = str(input("\nEnter the algorithm you want to use: ")).lower()
+if choice not in algorithms:
+    print("Invalid Algorithm")
+    exit()
+
+print()
+if choice == "bogo":
+    bogo.sort()
+elif choice == "bubble":
+    bubble.sort()
+elif choice == "insertion":
+    insertion.sort()
+elif choice == "merge":
+    merge.sort()
+elif choice == "sleep":
+    sleep.sort()
+elif choice == "stalin":
+    stalin.sort()

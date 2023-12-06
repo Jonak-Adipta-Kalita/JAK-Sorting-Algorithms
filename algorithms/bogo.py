@@ -10,5 +10,4 @@ def algorithm(arr: List):
         random.shuffle(arr)
 
 
-def bogo():
-    Sort(algorithm).sort()
+def sort(): Sort(algorithm).sort()

@@ -13,5 +13,4 @@ def algorithm(arr: List):
             pass
 
 
-def stalin():
-    Sort(algorithm).sort()
+def sort(): Sort(algorithm).sort()

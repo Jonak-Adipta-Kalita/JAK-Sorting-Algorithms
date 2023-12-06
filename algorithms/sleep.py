@@ -21,5 +21,4 @@ def algorithm(arr: List):
     arr.extend(new_arr)
 
 
-def sleep():
-    Sort(algorithm).sort()
+def sort(): Sort(algorithm).sort()

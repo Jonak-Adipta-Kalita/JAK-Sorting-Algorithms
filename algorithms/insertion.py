@@ -13,5 +13,4 @@ def algorithm(arr: List):
         arr[j + 1] = d
 
 
-def insertion():
-    Sort(algorithm).sort()
+def sort(): Sort(algorithm).sort()
