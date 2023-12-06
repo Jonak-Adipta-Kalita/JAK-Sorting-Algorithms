@@ -23,7 +23,8 @@ if choice not in algorithms:
     print("Invalid Algorithm")
     exit()
 
-print()
+if not sys.argv[1:]:
+    print()
 if choice == "bogo":
     bogo.sort()
 elif choice == "bubble":
