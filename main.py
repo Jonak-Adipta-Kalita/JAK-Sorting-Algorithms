@@ -11,7 +11,7 @@ algorithms = {
 }
 
 choice = ""
-if sys.argv[1:]:
+if len(sys.argv) > 1:
     choice = sys.argv[1].lower()
 else:
     for algorithm in algorithms:
